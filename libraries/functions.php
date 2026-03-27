@@ -16,6 +16,10 @@ function getPlatform(): string {
     return PHP_OS;
 }
 
+function getCheckedAt(): string {
+    return date('D, d M Y H:i:s T');
+}
+
 function getLogicalCores(): int
 {
     return (int) shell_exec('sysctl -n hw.logicalcpu');
